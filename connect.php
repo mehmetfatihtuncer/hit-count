@@ -5,4 +5,9 @@ try {
     echo "Connection error <br/>", $error->getMessage();
 }
 
-?>
+function Filter($Value){
+    $ProcessOne = trim($Value);
+    $ProcessTwo = strip_tags($ProcessOne);
+    $ProcessThree = htmlspecialchars($ProcessTwo, ENT_QUOTES);
+        return $ProcessThree;
+}
